@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "jsx": "react-jsx",
+
+    "declaration": true,
+
+    "outDir": "types/etwas",
+
+    "declarationDir": "./types",
+
+    "lib": ["DOM", "ESNext"]
+  },
+  "include": ["src/*"]
+}
