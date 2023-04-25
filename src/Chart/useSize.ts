@@ -5,19 +5,20 @@ interface Props {
   width?: number;
 }
 
+const Multiplicador = 0.5;
+
 export default function useSize({
-  height: _height = window.innerHeight * 0.5,
-  width: _width = window.innerWidth * 0.5,
+  height: _height = window.innerHeight * Multiplicador,
+  width: _width = window.innerWidth * Multiplicador,
 }: Props) {
   const [width, setWidth] = useState(_width);
   const [height, setHeight] = useState(_height);
 
   const resize = useCallback(() => {
     const handleResize = () => {
-      setWidth(window.innerWidth * 0.9);
-      setHeight(window.innerHeight * 0.5);
+      setWidth(window.innerWidth * Multiplicador);
+      setHeight(window.innerHeight * Multiplicador);
     };
-    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);

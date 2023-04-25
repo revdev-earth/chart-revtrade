@@ -6,7 +6,7 @@ export interface Chart {
 	width?: number;
 	yValues?: number[];
 }
-declare const _default: ({ height: _height, width: _width, yValues, }: Chart) => JSX.Element;
+declare const _default: import("react").MemoExoticComponent<({ height: _height, width: _width, yValues }: Chart) => JSX.Element>;
 
 export {
 	_default as Chart,
