@@ -21,7 +21,8 @@ install_dependencies () {
 
     echo 'swc'
     pnpm i -D \
-        @rollup/plugin-swc \
+        @swc/core \
+        rollup-plugin-swc3 
 
     echo ' '
     
@@ -35,14 +36,14 @@ install_dependencies () {
     pnpm i -D \
         @rollup/plugin-terser
 
-    echo ' '
+    # echo ' '
 
-    echo 'json' 
-    pnpm i -D \
-        @rollup/plugin-json
+    # echo 'json' 
+    # pnpm i -D \
+    #     @rollup/plugin-json
 
-    echo ' '
 
+    # echo ' '
 
     # echo 'node resolve' 
     # pnpm i -D \
@@ -58,7 +59,7 @@ install_dependencies () {
 
 
 eto () {
-    pnpm build:ts
+    pnpm build
 }
 
 
